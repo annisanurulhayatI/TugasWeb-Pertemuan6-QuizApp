@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="quiz-container">
+
+        <header class="quiz-header">
+            <div>
+                <p class="quiz-category" id="category">Interactive Quiz</p>
+                <h1>Interactive Quiz</h1>
+            </div>
+
+            <button id="themeBtn" class="theme-btn" type="button" aria-label="Ubah tema">
+                <i class="fi fi-rr-moon"></i>
+            </button>
+        </header>
+
+        <section id="categoryMenu" class="category-menu">
+
+            <div class="menu-heading">
+                <p>Pilih Kategori</p>
+                <h2>Mau mengerjakan quiz apa?</h2>
+            </div>
+
+            <div class="category-grid">
+
+                <button class="category-btn" data-category="Matematika" type="button">
+                    <span>Matematika</span>
+                    <i class="fi fi-rr-arrow-small-right"></i>
+                </button>
+
+                <button class="category-btn" data-category="Bahasa Inggris" type="button">
+                    <span>Bahasa Inggris</span>
+                    <i class="fi fi-rr-arrow-small-right"></i>
+                </button>
+
+                <button class="category-btn" data-category="Pemrograman" type="button">
+                    <span>Pemrograman</span>
+                    <i class="fi fi-rr-arrow-small-right"></i>
+                </button>
+
+                <button class="category-btn" data-category="Sejarah" type="button">
+                    <span>Sejarah</span>
+                    <i class="fi fi-rr-arrow-small-right"></i>
+                </button>
+
+                <button class="category-btn category-random" data-category="Random" type="button">
+                    <span>Random</span>
+                    <small>Gabungan semua kategori</small>
+                    <i class="fi fi-rr-shuffle"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="quizContent" class="quiz-content hidden">
+
+            <div class="quiz-info">
+                <span id="progress">Soal 1/10</span>
+
+                <div class="timer">
+                    <i class="fi fi-rr-clock"></i>
+                    <span id="timer">15</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <div class="question-box">
+                <p id="question">Pertanyaan akan muncul di sini</p>
+            </div>
+
+            <div id="options" class="options-grid"></div>
+
+            <button id="nextBtn" class="next-btn hidden" type="button">
+                Berikutnya
+                <i class="fi fi-rr-arrow-small-right"></i>
+            </button>
+
+        </section>
+
+        <section id="result" class="result hidden">
+
+            <p class="result-label">Quiz Selesai</p>
+
+            <h2>
+                Skor Kamu:
+                <span id="score">0/10</span>
+            </h2>
+
+            <p>
+                High Score:
+                <strong id="highScore">0%</strong>
+            </p>
+
+            <div class="result-actions">
+
+                <button id="restartBtn" class="restart-btn" type="button">
+                    <i class="fi fi-rr-refresh"></i>
+                    Ulangi Quiz
+                </button>
+
+                <button id="categoryBtn" class="category-back-btn" type="button">
+                    Pilih Kategori
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
